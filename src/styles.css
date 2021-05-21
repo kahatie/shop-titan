@@ -1236,19 +1236,23 @@ button:hover {
   background: radial-gradient(transparent 0, #3d2937 75%),
     -webkit-gradient(linear, right top, left top, from(transparent), color-stop(90%, #271a23)),
     -webkit-gradient(linear, right top, left top, from(#271a23), color-stop(90%, transparent)),
-    50%/75% no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+    50%/75% no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
   background: radial-gradient(transparent 0, #3d2937 75%),
     linear-gradient(-90deg, transparent, #271a23 90%),
     linear-gradient(-90deg, #271a23, transparent 90%),
-    50%/75% no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+    50%/75% no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
   background: radial-gradient(transparent 0, var(--secondaryBackground) 75%),
     -webkit-gradient(linear, right top, left top, from(transparent), color-stop(90%, var(--primaryBackground))),
     -webkit-gradient(linear, right top, left top, from(var(--primaryBackground)), color-stop(90%, transparent)),
-    50%/75% no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+    50%/75% no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
   background: radial-gradient(transparent 0, var(--secondaryBackground) 75%),
     linear-gradient(-90deg, transparent, var(--primaryBackground) 90%),
     linear-gradient(-90deg, var(--primaryBackground), transparent 90%),
-    50%/75% no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+    50%/75% no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
 }
 .screenshotDetails--Title {
   position: relative;
@@ -1273,7 +1277,8 @@ button:hover {
 .RenderPolonia {
   left: -125px;
   bottom: -150px;
-  background: 50%/125% no-repeat url(/images/assets/renders/Polonia.png);
+  background: 50%/125% no-repeat
+    url(https://playshoptitans.com/images/assets/renders/Polonia.png);
 }
 .RenderPolonia,
 .RenderRudo {
@@ -1283,7 +1288,8 @@ button:hover {
 }
 .RenderRudo {
   left: 200px;
-  background: 50%/150% no-repeat url(/images/assets/renders/Rudo.png);
+  background: 50%/150% no-repeat
+    url(https://playshoptitans.com/images/assets/renders/Rudo.png);
 }
 .screenshotDetails--Content {
   position: relative;
@@ -1424,7 +1430,8 @@ button:hover {
       color-stop(65%, #271a23),
       to(transparent)
     ),
-    50% / cover no-repeat url(/images/assets/ui/home/pressKit-background.jpg);
+    50% / cover no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/pressKit-background.jpg);
   background: linear-gradient(
       90deg,
       transparent,
@@ -1432,7 +1439,8 @@ button:hover {
       #271a23 65%,
       transparent
     ),
-    50% / cover no-repeat url(/images/assets/ui/home/pressKit-background.jpg);
+    50% / cover no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/pressKit-background.jpg);
   background: -webkit-gradient(
       linear,
       left top,
@@ -1442,7 +1450,8 @@ button:hover {
       color-stop(65%, var(--primaryBackground)),
       to(transparent)
     ),
-    50% / cover no-repeat url(/images/assets/ui/home/pressKit-background.jpg);
+    50% / cover no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/pressKit-background.jpg);
   background: linear-gradient(
       90deg,
       transparent,
@@ -1450,7 +1459,8 @@ button:hover {
       var(--primaryBackground) 65%,
       transparent
     ),
-    50% / cover no-repeat url(/images/assets/ui/home/pressKit-background.jpg);
+    50% / cover no-repeat
+      url(https://playshoptitans.com/images/assets/ui/home/pressKit-background.jpg);
   opacity: 0.1;
 }
 .pressKit--Render,
@@ -1476,7 +1486,8 @@ button:hover {
   transition: 0.2s ease-in-out;
 }
 .pressKit--Render {
-  background: 85% / contain no-repeat url(/images/assets/renders/academy.png);
+  background: 85% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/renders/academy.png);
   -webkit-animation: slideLeftContent 1s;
   animation: slideLeftContent 1s;
   -webkit-filter: drop-shadow(-5px 8px 0 rgba(0, 0, 0, 0.1));
@@ -1497,7 +1508,8 @@ button:hover {
   overflow: hidden;
 }
 .socialMedia--Render {
-  background: 15% / contain no-repeat url(/images/assets/renders/lilu.png);
+  background: 15% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/renders/lilu.png);
   -webkit-animation: slideRightContent 1s;
   animation: slideRightContent 1s;
   -webkit-filter: drop-shadow(5px 8px 0 rgba(0, 0, 0, 0.1));
@@ -1545,9 +1557,11 @@ button:hover {
 @media screen and (max-width: 1501px) {
   .screenshotContainer {
     background: radial-gradient(transparent 0, #3d2937 75%),
-      50% / cover no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+      50% / cover no-repeat
+        url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
     background: radial-gradient(transparent 0, var(--secondaryBackground) 75%),
-      50% / cover no-repeat url(/images/assets/ui/home/city_nightscape.jpg);
+      50% / cover no-repeat
+        url(https://playshoptitans.com/images/assets/ui/home/city_nightscape.jpg);
   }
   .screenshotDetails--Render {
     display: none;
@@ -1709,11 +1723,14 @@ button:hover {
   height: 45px;
   font-weight: 400;
   text-decoration: none;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     var(--redGradient);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -3146,7 +3163,7 @@ button:hover {
   align-items: center;
   height: 50px;
   background: 50% / contain no-repeat
-    url(/images/assets/ui/item_banner_standard.png);
+    url(https://playshoptitans.com/images/assets/ui/item_banner_standard.png);
   font-size: 22.5px;
   font-size: 2.25rem;
   line-height: 25px;
@@ -3173,7 +3190,7 @@ button:hover {
 }
 .itemCardMastered .ItemCard--Title {
   background: 50% / contain no-repeat
-    url(/images/assets/ui/item_banner_mastered.png);
+    url(https://playshoptitans.com/images/assets/ui/item_banner_mastered.png);
 }
 .Title--Image {
   min-width: 30px;
@@ -3221,7 +3238,8 @@ button:hover {
   align-items: center;
   width: 45px;
   width: 4.5rem;
-  background: 50% / contain no-repeat url(/images/assets/ui/item_tier.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/item_tier.png);
 }
 .ItemCard--MoreDetails {
   position: absolute;
@@ -3322,16 +3340,20 @@ button:hover {
   text-shadow: var(--textStroke);
 }
 .InfoValue .InfoImage {
-  background: 50% / contain no-repeat url(/images/assets/ui/currency_gold.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/currency_gold.png);
 }
 .InfoXP .InfoImage {
-  background: 50% / contain no-repeat url(/images/assets/ui/player_level.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/player_level.png);
 }
 .InfoWorkerXP .InfoImage {
-  background: 50% / contain no-repeat url(/images/assets/ui/char_level.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/char_level.png);
 }
 .InfoTime .InfoImage {
-  background: 50% / contain no-repeat url(/images/assets/ui/stats/time.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/stats/time.png);
 }
 .ExpandedDetails--Container {
   position: fixed;
@@ -3470,11 +3492,13 @@ button:hover {
 }
 .Item--Cycle.CycleLeft {
   right: 300px;
-  background: 50% / contain no-repeat url(/images/assets/ui/arrow_left.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/arrow_left.png);
 }
 .Item--Cycle.CycleRight {
   left: 300px;
-  background: 50% / contain no-repeat url(/images/assets/ui/arrow_right.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/arrow_right.png);
 }
 @media screen and (max-width: 499px) {
   .Item--Cycle {
@@ -3548,11 +3572,14 @@ button:hover {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     var(--redGradient);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -3630,7 +3657,8 @@ button:hover {
   height: 50px;
   height: 5rem;
   margin: 0 5px;
-  background: 50% / contain no-repeat url(/images/assets/ui/item_tier.png);
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/item_tier.png);
   font-size: 28px;
   font-size: 2.8rem;
   text-shadow: 1px 1px 0 #1f161f, -1px 1px 0 #1f161f, 1px -1px 0 #1f161f,
@@ -5072,11 +5100,14 @@ button.close_1x3s325 {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     var(--redGradient);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -5094,12 +5125,14 @@ button.close_1x3s325 {
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 .arrow_b9bbag-o_O-arrow__direction__left_shhpn5-o_O-arrow__size__medium_9f7hgo {
-  background: 50% / contain no-repeat url(/images/assets/ui/arrow_left.png) !important;
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/arrow_left.png) !important;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .arrow_b9bbag-o_O-arrow__direction__right_174p6a9-o_O-arrow__size__medium_9f7hgo {
-  background: 50% / contain no-repeat url(/images/assets/ui/arrow_right.png) !important;
+  background: 50% / contain no-repeat
+    url(https://playshoptitans.com/images/assets/ui/arrow_right.png) !important;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -5367,14 +5400,14 @@ button.close_1x3s325 {
   padding: 50px 10px;
   padding: 5rem 1rem;
   background: 50% / cover
-    url('/images/assets/ui/anniversary/anniversary_header.jpg');
+    url('https://playshoptitans.com/images/assets/ui/anniversary/anniversary_header.jpg');
   border-bottom: 2px solid #714059;
   border-bottom: 2px solid var(--tertiaryBorder);
 }
 @media screen and (max-width: 800px) {
   .Anniversary--Banner {
     background: 50% / cover
-      url('/images/assets/ui/anniversary/anniversary_header_mobile.jpg');
+      url('https://playshoptitans.com/images/assets/ui/anniversary/anniversary_header_mobile.jpg');
   }
 }
 .Anniversary--Header {
@@ -6153,9 +6186,11 @@ button.close_1x3s325 {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -6300,11 +6335,17 @@ button.close_1x3s325 {
   height: 55px;
   font-weight: 400;
   text-decoration: none;
-  background: no-repeat url('/images/assets/ui/action_arrow_back.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_arrow_back.png')
+      50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_arrow_back.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_arrow_back.png')
+      50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
-  background: no-repeat url('/images/assets/ui/action_arrow_back.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_arrow_back.png')
+      50%/80%,
     var(--redGradient);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -6629,7 +6670,7 @@ button.close_1x3s325 {
 .Nav--MobileMenu--Trigger {
   display: none;
   padding: 25px 30px;
-  background-image: url(/images/assets/ui/menu.png);
+  background-image: url(https://playshoptitans.com/images/assets/ui/menu.png);
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -6688,7 +6729,8 @@ button.close_1x3s325 {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  background: 15px/25px no-repeat url(/images/assets/ui/lang_icon.png);
+  background: 15px/25px no-repeat
+    url(https://playshoptitans.com/images/assets/ui/lang_icon.png);
   min-width: 60px;
   min-height: 50px;
   margin-left: auto;
@@ -6702,7 +6744,7 @@ button.close_1x3s325 {
 .LanguageSelector--Icon:hover {
   background: #1e151a 15px/25px no-repeat url(/images/assets/ui/lang_icon.png);
   background: var(--tabHoverBackground) 15px/25px no-repeat
-    url(/images/assets/ui/lang_icon.png);
+    url(https://playshoptitans.com/images/assets/ui/lang_icon.png);
 }
 .NavLink--Icon {
   width: 30px;
@@ -6891,11 +6933,13 @@ button.close_1x3s325 {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
   background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     var(--redGradient);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -7121,9 +7165,11 @@ button.close_1x3s325 {
   align-items: center;
   width: 35px;
   height: 35px;
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3b12), to(#ff542b));
-  background: no-repeat url('/images/assets/ui/action_close.png') 50%/80%,
+  background: no-repeat
+      url('https://playshoptitans.com/images/assets/ui/action_close.png') 50%/80%,
     linear-gradient(0deg, #ff3b12 0, #ff542b);
   border: 3px solid #fd6137;
   border: 3px solid var(--redBorder);
@@ -7619,7 +7665,7 @@ button.close_1x3s325 {
   align-items: center;
   height: 50px;
   background: 50% / contain no-repeat
-    url(/images/assets/ui/item_banner_standard.png);
+    url(https://playshoptitans.com/images/assets/ui/item_banner_standard.png);
   font-size: 20px;
   font-size: 2rem;
   line-height: 25px;

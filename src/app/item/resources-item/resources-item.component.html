@@ -1,0 +1,7 @@
+<div class="ResourcesItem" [ngClass]="( type == 'resource' ) ? 'ResourceItem--Resource' : 'Item--QuestComponent' ">
+  <div class="ResourcesImageBorder" *ngIf="type != 'resource'"></div>
+  <div class="ResourcesImage">
+    <app-picture [uid]="uid" [type]="type"></app-picture>
+  </div>
+  <div class="ResourcesContent">{{quantity}}</div>
+</div>

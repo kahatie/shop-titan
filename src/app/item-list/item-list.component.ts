@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import ItemsJson from '../../assets/items.json';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-item-list',
@@ -13,6 +14,17 @@ export class ItemListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.items$ = of(ItemsJson);
+    this.items$ = of(ItemsJson).pipe(
+      map(items => Object.values(items)),
+      map(items =>
+        items.filter(
+          item =>
+            item.uid == 'victoriansword' ||
+            item.uid == 'templesword' ||
+            item.uid == 'shortsword'
+        )
+      ),
+      map(items => items.slice(0, 10))
+    );
   }
 }

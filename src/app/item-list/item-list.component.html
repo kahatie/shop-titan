@@ -2,5 +2,5 @@
   item find : {{ (items$ | async)?.length }}
 </div>
 <div class="ItemCard--Container">
-  <app-item *ngFor="let item of items$ | async | keyvalue | slice:0:1" [item]="item?.value"></app-item>
+  <app-item *ngFor="let item of items$ | async | keyvalue" [item]="item?.value"></app-item>
 </div>

@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { PictureComponent } from './picture/picture.component';
+import { ResourcesItemComponent } from './item/resources-item/resources-item.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, ItemComponent, ItemListComponent, PictureComponent],
+  declarations: [AppComponent, ItemComponent, ItemListComponent, PictureComponent, ResourcesItemComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

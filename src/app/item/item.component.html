@@ -3,15 +3,14 @@
   <div class="ItemCard--ImageBorder"></div>
   <div class="ItemCard--Image">
     <div class="ItemCard--ImageBackground">
-      <app-picture uid="item_bg_default" type="itemBg"></app-picture>
+      <app-picture type="itemBg" [excl]="item.excl"></app-picture>
     </div>
     <div class="ItemImage">
       <app-picture [uid]="item?.uid" type="item"></app-picture>
     </div>
   </div>
   <h2 class="ItemCard--Title">
-    <div class="Title--Image"
-      style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_accessory_amulet.png&quot;) no-repeat scroll center center / contain;">
+    <div class="Title--Image" [style]="icon">
     </div><span class="Title--String">{{item?.uid}}</span>
   </h2>
   <div class="ItemCard--Tier">
@@ -21,58 +20,21 @@
     <div class="MoreDetailsContent"> i </div>
   </div>
   <div class="ItemCard--Resources">
-    <div class="ResourcesItem ResourceItem--Resource">
-      <div class="ResourcesImage">
-        <picture>
-          <source srcset="/images/assets/ui/resources/webp/iron.webp" type="image/webp">
-          <source srcset="/images/assets/ui/resources/png/iron.png" type="image/png"><img src="/images/assets/ui/resources//png/iron.png" alt="Fer" loading="lazy">
-        </picture>
-      </div>
-      <div class="ResourcesContent">218</div>
-    </div>
-    <div class="ResourcesItem ResourceItem--Resource">
-      <div class="ResourcesImage">
-        <picture>
-          <source srcset="/images/assets/ui/resources/webp/steel.webp" type="image/webp">
-          <source srcset="/images/assets/ui/resources/png/steel.png" type="image/png"><img src="/images/assets/ui/resources//png/steel.png" alt="Acier" loading="lazy">
-        </picture>
-      </div>
-      <div class="ResourcesContent">62</div>
-    </div>
-    <div class="ResourcesItem ResourceItem--Resource">
-      <div class="ResourcesImage">
-        <picture>
-          <source srcset="/images/assets/ui/resources/webp/gems.webp" type="image/webp">
-          <source srcset="/images/assets/ui/resources/png/gems.png" type="image/png"><img src="/images/assets/ui/resources//png/gems.png" alt="Joyaux" loading="lazy">
-        </picture>
-      </div>
-      <div class="ResourcesContent">22</div>
-    </div>
-    <div class="ResourcesItem Item--QuestComponent">
-      <div class="ResourcesImageBorder"></div>
-      <div class="ResourcesImage">
-        <picture>
-          <source srcset="/images/assets/items/webp/goldshell.webp" type="image/webp">
-          <source srcset="/images/assets/items/png/goldshell.png" type="image/png"><img src="/images/assets/items/png/goldshell.png" alt="Coquille précieuse" loading="lazy">
-        </picture>
-      </div>
-      <div class="ResourcesContent">5</div>
-    </div>
-    <div class="ResourcesItem Item--QuestComponent">
-      <div class="ResourcesImageBorder"></div>
-      <div class="ResourcesImage">
-        <picture>
-          <source srcset="/images/assets/items/webp/sharpfang.webp" type="image/webp">
-          <source srcset="/images/assets/items/png/sharpfang.png" type="image/png"><img src="/images/assets/items/png/sharpfang.png" alt="Croc de bronze" loading="lazy">
-        </picture>
-      </div>
-      <div class="ResourcesContent">4</div>
-    </div>
+    <app-resources-item type="resource" *ngIf="item.resource1" [uid]="item.resource1" [quantity]="item?.r1Qty">
+    </app-resources-item>
+    <app-resources-item type="resource" *ngIf="item.resource2" [uid]="item.resource2" [quantity]="item?.r2Qty">
+    </app-resources-item>
+    <app-resources-item type="resource" *ngIf="item.resource3" [uid]="item.resource3" [quantity]="item?.r3Qty">
+    </app-resources-item>
+    <app-resources-item type="component" *ngIf="item.component1" [uid]="item.component1" [quantity]="item?.c1Qty">
+    </app-resources-item>
+    <app-resources-item type="component" *ngIf="item.component2" [uid]="item.component2" [quantity]="item?.c2Qty">
+    </app-resources-item>
   </div>
   <div class="ItemCard--Info">
     <div class="InfoItem InfoValue">
       <div class="InfoImage"></div>
-      <div class="InfoContent">610,000</div>
+      <div class="InfoContent">{{item?.value}}</div>
     </div>
     <div class="InfoItem InfoTime">
       <div class="InfoImage"></div>
@@ -80,6 +42,3 @@
     </div>
   </div>
 </div>
-
-<hr>
-{{ item | json }}
