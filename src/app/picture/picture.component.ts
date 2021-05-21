@@ -10,8 +10,20 @@ export class PictureComponent implements OnInit {
   @Input() type: string;
 
   src = 'https://playshoptitans.com/images/assets/';
+  folder = {
+    resource: 'ui/resources/',
+    item: 'items/',
+    itemBg: 'ui/itembackgrounds/'
+  };
+
+  webp: string;
+  png: string;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.webp =
+      this.src + this.folder[this.type] + 'webp/' + this.uid + '.webp';
+    this.png = this.src + this.folder[this.type] + 'png/' + this.uid + '.png';
+  }
 }

@@ -3,18 +3,10 @@
   <div class="ItemCard--ImageBorder"></div>
   <div class="ItemCard--Image">
     <div class="ItemCard--ImageBackground">
-      <picture>
-        <source srcset="/images/assets/ui/itembackgrounds/webp/item_bg_default.webp" type="image/webp">
-        <source srcset="/images/assets/ui/itembackgrounds/png/item_bg_default.png" type="image/png">
-        <img src="/images/assets/ui/itembackgrounds/png/item_bg_default.png" alt="" loading="lazy">
-      </picture>
+      <app-picture uid="item_bg_default" type="itemBg"></app-picture>
     </div>
     <div class="ItemImage">
-      <picture>
-        <source srcset="/images/assets/items/webp/alimyriad.webp" type="image/webp">
-        <source srcset="/images/assets/items/png/alimyriad.png" type="image/png">
-        <img src="/images/assets/items/png/alimyriad.png" [alt]="item?.uid" loading="lazy">
-      </picture>
+      <app-picture [uid]="item?.uid" type="item"></app-picture>
     </div>
   </div>
   <h2 class="ItemCard--Title">
