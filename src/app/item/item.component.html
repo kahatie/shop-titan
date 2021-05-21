@@ -1,0 +1,93 @@
+<div class="ItemCard--Content--Psuedo"></div>
+<div class="ItemCard--Content">
+  <div class="ItemCard--ImageBorder"></div>
+  <div class="ItemCard--Image">
+    <div class="ItemCard--ImageBackground">
+      <picture>
+        <source srcset="/images/assets/ui/itembackgrounds/webp/item_bg_default.webp" type="image/webp">
+        <source srcset="/images/assets/ui/itembackgrounds/png/item_bg_default.png" type="image/png">
+        <img src="/images/assets/ui/itembackgrounds/png/item_bg_default.png" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="ItemImage">
+      <picture>
+        <source srcset="/images/assets/items/webp/alimyriad.webp" type="image/webp">
+        <source srcset="/images/assets/items/png/alimyriad.png" type="image/png">
+        <img src="/images/assets/items/png/alimyriad.png" [alt]="item?.uid" loading="lazy">
+      </picture>
+    </div>
+  </div>
+  <h2 class="ItemCard--Title">
+    <div class="Title--Image"
+      style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_accessory_amulet.png&quot;) no-repeat scroll center center / contain;">
+    </div><span class="Title--String">Alimyriad</span>
+  </h2>
+  <div class="ItemCard--Tier">
+    <div class="Tier--Value">10</div>
+  </div>
+  <div class="ItemCard--MoreDetails">
+    <div class="MoreDetailsContent"> i </div>
+  </div>
+  <div class="ItemCard--Resources">
+    <div class="ResourcesItem ResourceItem--Resource">
+      <div class="ResourcesImage">
+        <picture>
+          <source srcset="/images/assets/ui/resources/webp/iron.webp" type="image/webp">
+          <source srcset="/images/assets/ui/resources/png/iron.png" type="image/png"><img src="/images/assets/ui/resources//png/iron.png" alt="Fer" loading="lazy">
+        </picture>
+      </div>
+      <div class="ResourcesContent">218</div>
+    </div>
+    <div class="ResourcesItem ResourceItem--Resource">
+      <div class="ResourcesImage">
+        <picture>
+          <source srcset="/images/assets/ui/resources/webp/steel.webp" type="image/webp">
+          <source srcset="/images/assets/ui/resources/png/steel.png" type="image/png"><img src="/images/assets/ui/resources//png/steel.png" alt="Acier" loading="lazy">
+        </picture>
+      </div>
+      <div class="ResourcesContent">62</div>
+    </div>
+    <div class="ResourcesItem ResourceItem--Resource">
+      <div class="ResourcesImage">
+        <picture>
+          <source srcset="/images/assets/ui/resources/webp/gems.webp" type="image/webp">
+          <source srcset="/images/assets/ui/resources/png/gems.png" type="image/png"><img src="/images/assets/ui/resources//png/gems.png" alt="Joyaux" loading="lazy">
+        </picture>
+      </div>
+      <div class="ResourcesContent">22</div>
+    </div>
+    <div class="ResourcesItem Item--QuestComponent">
+      <div class="ResourcesImageBorder"></div>
+      <div class="ResourcesImage">
+        <picture>
+          <source srcset="/images/assets/items/webp/goldshell.webp" type="image/webp">
+          <source srcset="/images/assets/items/png/goldshell.png" type="image/png"><img src="/images/assets/items/png/goldshell.png" alt="Coquille précieuse" loading="lazy">
+        </picture>
+      </div>
+      <div class="ResourcesContent">5</div>
+    </div>
+    <div class="ResourcesItem Item--QuestComponent">
+      <div class="ResourcesImageBorder"></div>
+      <div class="ResourcesImage">
+        <picture>
+          <source srcset="/images/assets/items/webp/sharpfang.webp" type="image/webp">
+          <source srcset="/images/assets/items/png/sharpfang.png" type="image/png"><img src="/images/assets/items/png/sharpfang.png" alt="Croc de bronze" loading="lazy">
+        </picture>
+      </div>
+      <div class="ResourcesContent">4</div>
+    </div>
+  </div>
+  <div class="ItemCard--Info">
+    <div class="InfoItem InfoValue">
+      <div class="InfoImage"></div>
+      <div class="InfoContent">610,000</div>
+    </div>
+    <div class="InfoItem InfoTime">
+      <div class="InfoImage"></div>
+      <div class="InfoContent">5h 29m </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+{{ item | json }}

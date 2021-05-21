@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import ItemsJson from '../../assets/items.json';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-item-list',
