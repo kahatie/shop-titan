@@ -9,8 +9,8 @@
     </div>
   </div>
   <h2 class="ItemCard--Title">
-    <div class="Title--Image" [style]="icon">
-    </div><span class="Title--String">{{item?.uid}}</span>
+    <div class="Title--Image" [style]=" 'ui/itemtypes/' + this.titleImage[this.item.type] | uiIcon ">
+    </div><span class="Title--String">{{item?.uid}} ({{ item?.type}})</span>
   </h2>
   <div class="ItemCard--Tier">
     <div class="Tier--Value">{{item?.tier}}</div>

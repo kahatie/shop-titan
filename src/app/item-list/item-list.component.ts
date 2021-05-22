@@ -17,7 +17,18 @@ export class ItemListComponent implements OnInit {
     this.items$ = of(ItemsJson).pipe(
       map(items => Object.values(items)),
       map(items => items.filter(item => item.excl != null)),
-      map(items => items.slice(0, 10))
+      map(items => {
+        const result = [];
+        const map = new Map();
+        for (const item of items) {
+          if (!map.has(item.type)) {
+            map.set(item.type, true); // set any value to Map
+            result.push(item);
+          }
+        }
+        return result;
+      }),
+      map(items => items.slice(0, 50))
     );
   }
 }

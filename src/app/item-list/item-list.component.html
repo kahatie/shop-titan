@@ -6,10 +6,94 @@
 <div class="Browse--Container">
   <div class="ItemBrowse--Container">
     <div class="ItemHeader--Container">
-      <div class="ItemHeader--Image"
-        style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/craft.png&quot;) no-repeat scroll center center / contain;">
+      <div class="ItemHeader--Image" [style]="'/ui/craft.png' | uiIcon">
       </div>
       <h2 class="ItemHeader--Title">Navigation : Plans</h2>
+    </div>
+    <div class="ItemSort--Container">
+      <div class="ItemSortCategory--Content">
+        <div class="ItemFilterCategory selected">
+          <div class="FilterCategoryIcon" [style]=" '/ui/filtertypes/' + 'icon_weapons.png' | uiIcon">
+          </div>
+          <div class="FilterCategoryName">Armes</div>
+        </div>
+        <div class="ItemFilterCategory">
+          <div class="FilterCategoryIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/filtertypes/icon_armors.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+          <div class="FilterCategoryName">Armure</div>
+        </div>
+        <div class="ItemFilterCategory">
+          <div class="FilterCategoryIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/filtertypes/icon_accessories.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+          <div class="FilterCategoryName">Accessoires</div>
+        </div>
+        <div class="ItemFilterCategory">
+          <div class="FilterCategoryIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/filtertypes/icon_enchantments.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+          <div class="FilterCategoryName">Enchantements</div>
+        </div>
+        <div class="ItemFilterCategory">
+          <div class="FilterCategoryIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/filtertypes/icon_stones.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+          <div class="FilterCategoryName">Pierres</div>
+        </div>
+      </div>
+      <div class="ItemSort--Content">
+        <div class="ItemFilter selected">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_sword.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_axe.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_dagger.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_mace.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_spear.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_bow.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_wand.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_staff.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_gun.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+        <div class="ItemFilter">
+          <div class="FilterIcon"
+            style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_crossbow.png&quot;) no-repeat scroll center center / contain;">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="ItemCard--Container">
       <app-item *ngFor="let item of items$ | async | keyvalue" [item]="item?.value"></app-item>

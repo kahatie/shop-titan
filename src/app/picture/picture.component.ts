@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-picture',
@@ -10,7 +10,6 @@ export class PictureComponent implements OnInit {
   @Input() type: string;
   @Input() excl: string;
 
-  src = 'https://playshoptitans.com/images/assets/';
   folder = {
     resource: 'ui/resources/',
     component: 'items/',
@@ -21,7 +20,7 @@ export class PictureComponent implements OnInit {
   webp: string;
   png: string;
 
-  constructor() {}
+  constructor(@Inject('ASSETURL') private assetUrl: string) {}
 
   ngOnInit() {
     if (this.type == 'itemBg') {
@@ -34,7 +33,8 @@ export class PictureComponent implements OnInit {
     }
 
     this.webp =
-      this.src + this.folder[this.type] + 'webp/' + this.uid + '.webp';
-    this.png = this.src + this.folder[this.type] + 'png/' + this.uid + '.png';
+      this.assetUrl + this.folder[this.type] + 'webp/' + this.uid + '.webp';
+    this.png =
+      this.assetUrl + this.folder[this.type] + 'png/' + this.uid + '.png';
   }
 }
