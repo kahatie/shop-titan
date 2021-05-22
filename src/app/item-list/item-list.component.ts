@@ -22,9 +22,7 @@ export class ItemListComponent implements OnInit {
     public itemService: ItemService
   ) {
     this.filters$ = store.select('filter');
-    this.subCategory$ = this.filters$.pipe(
-      map()
-    )
+    // this.subCategory$ = this.filters$.pipe();
   }
 
   ngOnInit() {
