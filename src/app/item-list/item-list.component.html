@@ -11,10 +11,10 @@
       <h2 class="ItemHeader--Title">Navigation : Plans</h2>
     </div>
     <div class="ItemSort--Container">
-      <div class="ItemSortCategory--Content">
+      <div class="ItemSortCategory--Content" *ngIf="filters$ | async as filters">
 
         <div class="ItemFilterCategory" *ngFor="let category of itemService.items.order"
-          [ngClass]="{selected: state.selectedCategory == category}" (click)="state.selectedCategory = category">
+          [ngClass]="{selected: filters.selectedCategory == category}" (click)="selectCategory(category)">
           <div class="FilterCategoryIcon" [style]=" '/ui/filtertypes/icon_' + category + '.png' | uiIcon">
           </div>
           <div class="FilterCategoryName">{{ category | titlecase }}</div>
@@ -23,8 +23,7 @@
         <div class="ItemSort--Content">
 
           <div class="ItemFilter selected">
-            <div class="FilterIcon"
-              [style]=" 'ui/itemtypes/icon_' +  + '.png'">
+            <div class="FilterIcon" [style]=" 'ui/itemtypes/icon_' + '' + '.png'">
             </div>
           </div>
 

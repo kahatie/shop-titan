@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, createSelector, on } from '@ngrx/store';
 import * as FilterAction from './filter.actions';
 
 export interface State {
@@ -25,7 +25,7 @@ export const filterFeatureKey = 'filter';
 
 const filterReducer = createReducer(
   initialState,
-  on(FilterAction.selecteCategory, (state, { select }) => ({
+  on(FilterAction.selectCategory, (state, { select }) => ({
     ...state,
     selectedCategory: select
   })),
@@ -36,3 +36,10 @@ const filterReducer = createReducer(
 export function reducer(state: State, action) {
   return filterReducer(state, action);
 }
+
+export const selectCategory = (state: State): string => state.selectedCategory;
+
+export const selectSubCategory = (state: State): string => {
+  let cat = selectCategory(state);
+  return state['selected' + cat + 'Filter'];
+};

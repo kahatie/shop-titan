@@ -4,7 +4,8 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ItemService } from '../item.service';
 import { Store } from '@ngrx/store';
-import { filterFeatureKey, State } from '../ngrx/filter.reducer';
+import { State } from '../ngrx/filter.reducer';
+import { selectCategory } from '../ngrx/filter.actions';
 
 @Component({
   selector: 'app-item-list',
@@ -13,21 +14,17 @@ import { filterFeatureKey, State } from '../ngrx/filter.reducer';
 })
 export class ItemListComponent implements OnInit {
   items$: Observable<any>;
-
-  state: { [key: string]: string } = {
-    selectedCategory: 'weapons',
-    selectedFilter: 'sword',
-    selectedWeaponFilter: 'sword',
-    selectedArmorFilter: 'armorheavy',
-    selectedAccessoryFilter: 'herb',
-    selectedEnchantmentFilter: 'element_fire',
-    selectedStoneFilter: 'rune'
-  };
-
   filters$: Observable<State>;
+  subCategory$: Observable<string[]>;
 
-  constructor(private readonly store: Store, public itemService: ItemService) {
-    // this.filters$ = store.select('filter');
+  constructor(
+    private readonly store: Store<{ filter: State }>,
+    public itemService: ItemService
+  ) {
+    this.filters$ = store.select('filter');
+    this.subCategory$ = this.filters$.pipe(
+      map()
+    )
   }
 
   ngOnInit() {
@@ -47,5 +44,9 @@ export class ItemListComponent implements OnInit {
       }),
       map(items => items.slice(0, 50))
     );
+  }
+
+  selectCategory(category: string) {
+    this.store.dispatch(selectCategory({ select: category }));
   }
 }

@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-export const selecteCategory = createAction(
+export const selectCategory = createAction(
   '[Filter Component] Select Category',
   props<{ select: string }>()
 );
