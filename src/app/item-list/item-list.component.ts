@@ -24,10 +24,10 @@ export class ItemListComponent implements OnInit {
     selectedStoneFilter: 'rune'
   };
 
-  filters$: Observable<State>; 
+  filters$: Observable<State>;
 
   constructor(private readonly store: Store, public itemService: ItemService) {
-    this.filters$ = store.select(filterFeatureKey);
+    // this.filters$ = store.select('filter');
   }
 
   ngOnInit() {
