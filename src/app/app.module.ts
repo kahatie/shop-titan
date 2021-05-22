@@ -10,8 +10,20 @@ import { ResourcesItemComponent } from './item/resources-item/resources-item.com
 import { UiIconPipe } from '../pipe/ui-icon.pipe';
 import { ItemService } from './item.service';
 
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import * as filter from './ngrx/filter.reducer';
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    StoreModule.forRoot({ filter: filter.reducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: false
+    })
+  ],
   declarations: [
     AppComponent,
     ItemComponent,
@@ -27,7 +39,7 @@ import { ItemService } from './item.service';
     {
       provide: 'ASSETURL',
       multi: false,
-      useValue: 'https://playshoptitans.com/images/assets/',
+      useValue: 'https://playshoptitans.com/images/assets/'
     }
   ]
 })

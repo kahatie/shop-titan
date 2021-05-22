@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import ItemsJson from '../../assets/items.json';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ItemService } from '../item.service';
+import { Store } from '@ngrx/store';
+import { filterFeatureKey, State } from '../ngrx/filter.reducer';
 
 @Component({
   selector: 'app-item-list',
@@ -11,7 +14,21 @@ import { map } from 'rxjs/operators';
 export class ItemListComponent implements OnInit {
   items$: Observable<any>;
 
-  constructor() {}
+  state: { [key: string]: string } = {
+    selectedCategory: 'weapons',
+    selectedFilter: 'sword',
+    selectedWeaponFilter: 'sword',
+    selectedArmorFilter: 'armorheavy',
+    selectedAccessoryFilter: 'herb',
+    selectedEnchantmentFilter: 'element_fire',
+    selectedStoneFilter: 'rune'
+  };
+
+  filters$: Observable<State>; 
+
+  constructor(private readonly store: Store, public itemService: ItemService) {
+    this.filters$ = store.select(filterFeatureKey);
+  }
 
   ngOnInit() {
     this.items$ = of(ItemsJson).pipe(
