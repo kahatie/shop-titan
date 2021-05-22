@@ -16,14 +16,7 @@ export class ItemListComponent implements OnInit {
   ngOnInit() {
     this.items$ = of(ItemsJson).pipe(
       map(items => Object.values(items)),
-      map(items =>
-        items.filter(
-          item =>
-            item.uid == 'victoriansword' ||
-            item.uid == 'templesword' ||
-            item.uid == 'shortsword'
-        )
-      ),
+      map(items => items.filter(item => item.excl != null)),
       map(items => items.slice(0, 10))
     );
   }

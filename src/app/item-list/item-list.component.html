@@ -1,6 +1,18 @@
 <div>
   item find : {{ (items$ | async)?.length }}
 </div>
-<div class="ItemCard--Container">
-  <app-item *ngFor="let item of items$ | async | keyvalue" [item]="item?.value"></app-item>
+
+
+<div class="Browse--Container">
+  <div class="ItemBrowse--Container">
+    <div class="ItemHeader--Container">
+      <div class="ItemHeader--Image"
+        style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/craft.png&quot;) no-repeat scroll center center / contain;">
+      </div>
+      <h2 class="ItemHeader--Title">Navigation : Plans</h2>
+    </div>
+    <div class="ItemCard--Container">
+      <app-item *ngFor="let item of items$ | async | keyvalue" [item]="item?.value"></app-item>
+    </div>
+  </div>
 </div>
