@@ -1,3 +1,4 @@
 .InfoGuild .InfoImage {
-  background: 50% / contain no-repeat url(/assets/ui/guilds.png);
+  background: 50% / contain no-repeat
+    url(https://raw.githubusercontent.com/kahatie/shop-titan/master/src/assets/ui/guilds.png);
 }
