@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import ItemsJson from '../../assets/items.json';
-import { Observable, of, merge, combineLatest } from 'rxjs';
+import { Observable, of, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ItemService } from '../item.service';
 import { Store } from '@ngrx/store';
-import { State } from '../ngrx/filter.reducer';
-import { selectCategory } from '../ngrx/filter.actions';
+import { selectSubCategory, State } from '../ngrx/filter.reducer';
+import * as FilterAction from '../ngrx/filter.actions';
 import { Item } from '../item.model';
 
 @Component({
@@ -17,13 +17,20 @@ export class ItemListComponent implements OnInit {
   items$: Observable<Item[]>;
   filters$: Observable<State>;
   subCategory$: Observable<string[]>;
+  selectedSubCategory$: Observable<string>;
 
   constructor(
     private readonly store: Store<{ filter: State }>,
     public itemService: ItemService
   ) {
     this.filters$ = store.select('filter');
-    // this.subCategory$ = this.filters$.pipe();
+    this.subCategory$ = this.filters$.pipe(
+      map(state => state.selectedCategory),
+      map(category => this.itemService.items.key[category].order)
+    );
+    this.selectedSubCategory$ = this.filters$.pipe(
+      map(state => selectSubCategory(state))
+    );
   }
 
   ngOnInit() {
@@ -41,13 +48,33 @@ export class ItemListComponent implements OnInit {
   }
 
   selectCategory(category: string) {
-    this.store.dispatch(selectCategory({ select: category }));
+    this.store.dispatch(FilterAction.selectCategory({ select: category }));
+  }
+  selectSubCategory(category: string, subCategory: string) {
+    this.store.dispatch(
+      FilterAction.selectSubCategory({
+        category: category,
+        subCategory: subCategory
+      })
+    );
   }
 
   filterItems(items: any[], filter: State): any[] {
-    let types = Object.keys(
-      this.itemService.items.key[filter.selectedCategory].key
+    let cat = filter.selectedCategory;
+    let subCategory = filter.selectedSubCategory[cat];
+
+    let subCategories: { [key: string]: string } = this.itemService.items.key[
+      cat
+    ].key;
+
+    let type = Object.keys(subCategories).find(
+      key => subCategories[key] === subCategory
     );
-    return items.filter(item => types.includes(item.type));
+    return items.filter(item => item.type === type);
+  }
+
+  getIconUrl(category: string, subCategory: string): string {
+    let cat = category != 'accessories' ? category.slice(0, -1) : 'accessory';
+    return '/ui/itemtypes/icon_' + cat + '_' + subCategory + '.png';
   }
 }

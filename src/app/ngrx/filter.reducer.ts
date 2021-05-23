@@ -3,22 +3,26 @@ import * as FilterAction from './filter.actions';
 
 export interface State {
   selectedCategory: string;
-  selectedFilter: string;
-  selectedWeaponFilter: string;
-  selectedArmorFilter: string;
-  selectedAccessoryFilter: string;
-  selectedEnchantmentFilter: string;
-  selectedStoneFilter: string;
+  selectedSubCategory: {
+    weapons: string;
+    armors: string;
+    accessories: string;
+    enchantments: string;
+    stones: string;
+  };
 }
+
+export const initialSubCategory = {
+  weapons: 'sword',
+  armors: 'armorheavy',
+  accessories: 'herb',
+  enchantments: 'element_fire',
+  stones: 'rune'
+};
 
 export const initialState: State = {
   selectedCategory: 'weapons',
-  selectedFilter: 'sword',
-  selectedWeaponFilter: 'sword',
-  selectedArmorFilter: 'armorheavy',
-  selectedAccessoryFilter: 'herb',
-  selectedEnchantmentFilter: 'element_fire',
-  selectedStoneFilter: 'rune'
+  selectedSubCategory: initialSubCategory
 };
 
 export const filterFeatureKey = 'filter';
@@ -29,7 +33,13 @@ const filterReducer = createReducer(
     ...state,
     selectedCategory: select
   })),
-  // on(decrement, state => state - 1),
+  on(FilterAction.selectSubCategory, (state, { category, subCategory }) => ({
+    ...state,
+    selectedSubCategory: {
+      ...state.selectedSubCategory,
+      [category]: subCategory
+    }
+  })),
   on(FilterAction.reset, state => ({ ...initialState }))
 );
 
@@ -41,5 +51,5 @@ export const selectCategory = (state: State): string => state.selectedCategory;
 
 export const selectSubCategory = (state: State): string => {
   let cat = selectCategory(state);
-  return state['selected' + cat + 'Filter'];
+  return state.selectedSubCategory[cat];
 };

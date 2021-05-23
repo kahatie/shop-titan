@@ -20,58 +20,16 @@
           <div class="FilterCategoryName">{{ category | titlecase }}</div>
         </div>
 
-        <div class="ItemSort--Content" *ngIf="false">
+        <div class="ItemSort--Content" *ngIf="selectedSubCategory$ | async as selectedSubCategory">
 
-          <div class="ItemFilter selected">
-            <div class="FilterIcon" [style]=" 'ui/itemtypes/icon_' + '' + '.png'">
+          <div class="ItemFilter" *ngFor="let subCategory of (subCategory$ | async)"
+            [ngClass]="{selected: selectedSubCategory == subCategory}"
+            (click)="selectSubCategory(filters.selectedCategory, subCategory)"
+            >
+            <div class="FilterIcon" [style]=" getIconUrl(filters.selectedCategory, subCategory) | uiIcon">
             </div>
           </div>
 
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_axe.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_dagger.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_mace.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_spear.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_bow.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_wand.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_staff.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_gun.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
-          <div class="ItemFilter">
-            <div class="FilterIcon"
-              style="background: rgba(0, 0, 0, 0) url(&quot;/images/assets/ui/itemtypes/icon_weapon_crossbow.png&quot;) no-repeat scroll center center / contain;">
-            </div>
-          </div>
         </div>
       </div>
     </div>
