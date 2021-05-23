@@ -10,7 +10,7 @@
   </div>
   <h2 class="ItemCard--Title">
     <div class="Title--Image" [style]=" 'ui/itemtypes/' + this.titleImage[this.item.type] | uiIcon ">
-    </div><span class="Title--String">{{item?.uid}} ({{ item?.type}})</span>
+    </div><span class="Title--String">{{item?.uid}}</span>
   </h2>
   <div class="ItemCard--Tier">
     <div class="Tier--Value">{{item?.tier}}</div>
@@ -33,7 +33,7 @@
   <div class="ItemCard--Info">
     <div class="InfoItem InfoValue">
       <div class="InfoImage"></div>
-      <div class="InfoContent">{{item?.value}}</div>
+      <div class="InfoContent">{{item?.value?.toLocaleString()}}</div>
     </div>
     <div class="InfoItem InfoTime">
       <div class="InfoImage"></div>

@@ -24,8 +24,7 @@
 
           <div class="ItemFilter" *ngFor="let subCategory of (subCategory$ | async)"
             [ngClass]="{selected: selectedSubCategory == subCategory}"
-            (click)="selectSubCategory(filters.selectedCategory, subCategory)"
-            >
+            (click)="selectSubCategory(filters.selectedCategory, subCategory)">
             <div class="FilterIcon" [style]=" getIconUrl(filters.selectedCategory, subCategory) | uiIcon">
             </div>
           </div>
