@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="ItemCard--Container">
-      <app-item *ngFor="let item of items$ | async | keyvalue" [item]="item?.value"></app-item>
+      <app-item *ngFor="let item of items$ | async" [item]="item"></app-item>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Item } from '../item.model';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-item',
@@ -6,16 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  @Input() item: any;
+  @Input() item: Item;
 
   titleImage = {
     xa: 'icon_accessory_amulet.png',
     ws: 'icon_weapon_sword.png'
   };
 
+  guildCount: number;
+
   icon: string;
 
-  constructor() {}
+  constructor(public itemService: ItemService) {}
 
   ngOnInit() {}
+
+  getIconUrl(category: string, subCategory: string): string {
+    return this.itemService.getIconUrl(category, subCategory);
+  }
 }

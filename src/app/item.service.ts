@@ -96,4 +96,9 @@ export class ItemService {
   };
 
   constructor() {}
+
+  public getIconUrl(category: string, subCategory: string): string {
+    let cat = category != 'accessories' ? category.slice(0, -1) : 'accessory';
+    return '/ui/itemtypes/icon_' + cat + '_' + subCategory + '.png';
+  }
 }

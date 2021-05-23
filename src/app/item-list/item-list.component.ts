@@ -74,7 +74,6 @@ export class ItemListComponent implements OnInit {
   }
 
   getIconUrl(category: string, subCategory: string): string {
-    let cat = category != 'accessories' ? category.slice(0, -1) : 'accessory';
-    return '/ui/itemtypes/icon_' + cat + '_' + subCategory + '.png';
+    return this.itemService.getIconUrl(category, subCategory);
   }
 }
